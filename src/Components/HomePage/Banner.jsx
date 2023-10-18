@@ -4,7 +4,7 @@ const Banner = () => {
     return (
         <div className=" mx-auto ">
             <div className="carousel w-full h-[550px]">
-                <div id="slide1" className="carousel-item relative w-full">
+                <div id="slide1" className="carousel-item relative w-full h-[550px]">
                     <div className="flex lg:flex-row flex-col-reverse justify-center items-center">
                         <div className="text-center flex-1">
                             <h2 className="lg:text-4xl text-2xl my-6">QUALITY ELECTRONICS</h2>
@@ -12,7 +12,7 @@ const Banner = () => {
                             <button className="btn bg-blue-600 text-white">Shop Now</button>
                         </div>
                         <div className=" flex-1">
-                            <img src="https://i.ibb.co/DMKxLWq/christopher-gower-a-Xa21cf7r-Y-unsplash.jpg" className="w-full bg-white" />
+                            <img src="https://i.ibb.co/DMKxLWq/christopher-gower-a-Xa21cf7r-Y-unsplash.jpg" className="w-full  bg-white" />
                         </div>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
