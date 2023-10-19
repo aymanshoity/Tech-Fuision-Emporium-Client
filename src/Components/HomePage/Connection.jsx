@@ -2,7 +2,7 @@
 
 const Connection = () => {
     return (
-        <div className="bg-blue-600 h-[400px] flex lg:flex-row flex-col items-center justify-around my-20">
+        <div className="bg-blue-600 h-[300px] flex lg:flex-row flex-col items-center justify-around my-20">
             <div className="lg:text-left text-center text-white">
                 <h2 className="lg:text-6xl text-4xl font-bold">Stay</h2>
                 <p className="lg:text-3xl text-xl ">Connected</p>

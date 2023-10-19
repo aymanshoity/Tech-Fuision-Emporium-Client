@@ -1,9 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import { GrTechnology } from "react-icons/gr";
-
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
+    const { user, LogOut } = useContext(AuthContext)
 
-    const links= <>
+    const handleLogOut = () => {
+        LogOut()
+            .then(() => {
+                
+            })
+            .catch()
+    }
+    const links = <>
         <NavLink to='/' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-4' : ' text-xl   mr-4')}>Home</NavLink>
         <NavLink to='/addProduct' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-4' : ' text-xl   mr-4')}>Add Product</NavLink>
         <NavLink to='/myCart' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-4' : ' text-xl   mr-4')}>My Cart</NavLink>
@@ -22,10 +31,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center ">
-                <GrTechnology className="bg-white text-3xl mr-2 "></GrTechnology>
-                <h2 className="text-white normal-case lg:text-3xl text-xl ">  Tech Fuision Emporium</h2>
+                    <GrTechnology className="bg-white text-3xl mr-2 "></GrTechnology>
+                    <h2 className="text-white normal-case lg:text-3xl text-xl ">  Tech Fuision Emporium</h2>
                 </div>
-                
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-white">
@@ -33,8 +42,17 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/register' className="btn">Register</Link>
+                {user ? <>
+                    <div className="flex lg:flex-row flex-col justify-center items-center">
+                        <img className="w-[50px] h-[50px] border rounded-full mr-1" src={user.photoURL} alt="" />
+                        <span className="text-white mr-1">{user.email}</span>
+                        <Link onClick={handleLogOut} to='/' className="btn">Logout</Link>
+                        
+                    </div>
+                </>
+                    : <Link to='/register' className="btn">Register</Link>}
             </div>
+            
         </div>
     );
 };
