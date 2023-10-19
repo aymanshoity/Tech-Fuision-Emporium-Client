@@ -18,8 +18,7 @@ const Login = () => {
         setErrorMessage('');
         setSuccessMessage('');
 
-        if(user){
-            signInUser(email, password)
+        signInUser(email, password)
             .then(result => {
                 console.log(result.user)
                 setSuccessMessage('User Logged In Successfully!!!!')
@@ -28,10 +27,6 @@ const Login = () => {
                 console.error(error)
                 setErrorMessage('Email/password does not matches.')
             })
-        }else{
-            return setErrorMessage('please Sing up first')
-        }
-
       
 
 
