@@ -17,7 +17,7 @@ const AllBrands = () => {
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img className="w-full h-[350px]" src="https://i.ibb.co/ZgGbVFg/xavier-wendling-e2d-Dvd-H3l-IY-unsplash.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">Apple</h2>
+                            <h2 className="card-title text-center">Apple</h2>
                         </div>
                     </div>
                 </Link>
@@ -25,7 +25,7 @@ const AllBrands = () => {
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img className="w-full h-[350px]" src="https://i.ibb.co/0GBRHNk/mitchell-luo-jz4ca36o-J-M-unsplash.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">Google</h2>
+                            <h2 className="card-title text-center">Google</h2>
                         </div>
                     </div>
                 </Link>
@@ -33,7 +33,7 @@ const AllBrands = () => {
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img className="w-full h-[350px]" src="https://i.ibb.co/St6qGDR/kote-puerto-ILQoi-HMJMME-unsplash-1.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">Samsung</h2>
+                            <h2 className="card-title text-center">Samsung</h2>
                         </div>
                     </div>
                 </Link>
@@ -41,7 +41,7 @@ const AllBrands = () => {
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img className="w-full h-[350px]" src="https://i.ibb.co/L5z7hmy/pexels-olena-bohovyk-5998486.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">Lenovo</h2>
+                            <h2 className="card-title text-center">Lenovo</h2>
                         </div>
                     </div>
                 </Link>
@@ -50,7 +50,7 @@ const AllBrands = () => {
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img className="w-full h-[350px]" src="https://i.ibb.co/8j5gw4z/james-feaver-cv3wn-Erx7w-unsplash.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">Sony</h2>
+                            <h2 className="card-title text-center">Sony</h2>
                         </div>
                     </div>
                 </Link>
@@ -58,7 +58,7 @@ const AllBrands = () => {
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img className="w-full h-[350px]" src="https://i.ibb.co/S5QDtdM/christian-salas-s-7eu-Md-Fyw-A-unsplash.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">Xiaomi</h2>
+                            <h2 className="card-title text-center">Xiaomi</h2>
                         </div>
                     </div>
                 </Link>
