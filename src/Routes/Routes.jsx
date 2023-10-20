@@ -7,6 +7,7 @@ import MyCart from "../Components/Pages/MyCart/MyCart";
 import Login from "../Components/Pages/Login/Login";
 import Register from "../Components/Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import AllBrands from "../Components/HomePage/AllBrands";
 
 
 
@@ -15,14 +16,17 @@ const Routes = createBrowserRouter([
     element:<Roots></Roots>,
     errorElement:<ErrorPage></ErrorPage>,
     children:[
-        {path:'/',element:<Home></Home>,},
+        {path:'/',element:<Home></Home>},
+        {path:'/:brand',element:<AllBrands></AllBrands>,loader:({params})=>fetch(`http://localhost:5000/products/${params.brand}`)},
         {path:'/addProduct',element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>},
         {path:'/myCart',element:<PrivateRoute><MyCart></MyCart> </PrivateRoute>},
         {path:'/login',element: <Login></Login> },
         {path:'/register',element:<Register></Register> }
 
     ]
-}
+   
+},
+
     
 ])
     
