@@ -2,7 +2,7 @@
 import {  useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
+import { saveProduct } from "../Utility/localStorage";
 
 
 
@@ -13,8 +13,9 @@ const ProductDetails = () => {
     const {photo, name, brand, type, price, ratings,details} = loadedProduct
     console.log(id,loadedProduct)
 
-    const handleAddToCart=(id,)=>{
+    const handleAddToCart=(id)=>{
          console.log(id)
+         saveProduct(id)
          Swal.fire('Product Added Successfully!')
          
          
