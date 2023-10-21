@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavLink to='/addProduct' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-4' : ' text-xl   mr-4')}>Add Product</NavLink>
         <NavLink to='/myCart' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-4' : ' text-xl   mr-4')}>My Cart</NavLink>
         <NavLink to='/login' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-4' : ' text-xl   mr-4')}>Login</NavLink>
-        {/* <NavLink to='/' className={({ isActive }) => (isActive ? 'text-yellow-300 text-xl   mr-2' : 'text-white text-xl   mr-2')}>Home</NavLink> */}
+        
     </>
     return (
         <div className="navbar bg-blue-600 p-6">
@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div className="flex lg:flex-row flex-col justify-center items-center">
                         <img className="w-[50px] h-[50px] border rounded-full mr-1" src={user.photoURL} alt="" />
                         <span className="text-white mr-1">{user.email}</span>
-                        <Link onClick={handleLogOut} to='/' className="btn">Logout</Link>
+                        <Link onClick={handleLogOut} to='/login' className="btn">Logout</Link>
                         
                     </div>
                 </>

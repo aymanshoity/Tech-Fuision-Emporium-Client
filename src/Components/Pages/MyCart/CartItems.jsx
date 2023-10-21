@@ -24,15 +24,19 @@ const CartItems = ({ item, product, setProduct }) => {
                 })
                     .then(res => res.json())
                     .then(data =>{ console.log(data)
-                        if (data.deletedCount > 0)
-                        Swal.fire(
-                            'Deleted!',
-                            'Your Chosen Product has been deleted.',
-                            'success'
-                        )})
+                        if (data.deletedCount > 0){
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Chosen Product has been deleted.',
+                                'success'
+                            )
+                            const remaining = product.filter(item => item._id !== _id)
+                            setProduct(remaining)
+                        }
                         
-                        const remaining = product.filter(item => item._id !== _id)
-                        setProduct(remaining)
+                    })
+                        
+                        
 
             }
         })

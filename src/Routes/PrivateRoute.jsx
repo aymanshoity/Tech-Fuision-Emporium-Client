@@ -7,8 +7,10 @@ const PrivateRoute = ({children}) => {
     const {user}=useContext(AuthContext)
     if(user){
         return children
+    }else{
+        return <Navigate to='/login'></Navigate>
     }
-    return <Navigate to='/'></Navigate>
+    
 };
 
 export default PrivateRoute;

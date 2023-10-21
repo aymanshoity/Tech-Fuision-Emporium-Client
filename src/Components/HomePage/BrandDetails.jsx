@@ -12,16 +12,10 @@ const BrandDetails = ({ product }) => {
                 <p>Product Name: <span className="text-blue-600 font-bold">{name}</span></p>
                 <p>Device:{type}</p>
                 <p>Price: <span className="text-blue-600 font-bold">{price} $</span></p>
-                <div className="rating">
-                    <input type="radio" name="rating-1" className="mask mask-star" />
-                    <input type="radio" name="rating-1" className="mask mask-star" />
-                    <input type="radio" name="rating-1" className="mask mask-star" />
-                    <input type="radio" name="rating-1" className="mask mask-star" />
-                    <input type="radio" name="rating-1" className="mask mask-star" />
-                </div>
-                <div className="card-actions justify-start">
+                <p>Rating Star: {ratings}/5</p>
+                <div className="card-actions justify-start flex flex-col ">
                     <Link to={`/${brand}/${_id}`}  className="btn bg-blue-600 text-white">Details</Link>
-                    <Link className="btn bg-blue-600 text-white">Update</Link>
+                    <Link to={`/${brand}/update/${_id}`} className="btn bg-blue-600 text-white">Update</Link>
 
                 </div>
             </div>

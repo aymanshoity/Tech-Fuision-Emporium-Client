@@ -10,8 +10,9 @@ const AddProduct = () => {
         const photo=form.photo.value
         const price=form.price.value
         const details=form.details.value
+        const ratings=form.rating.value
 
-        const product={brand,name,type,price,photo,details}
+        const product={brand,name,type,price,photo,details,ratings}
         console.log(product)
 
         fetch('http://localhost:5000/products',{
@@ -30,8 +31,8 @@ const AddProduct = () => {
     return (
         <div className="hero min-h-screen"  style={{backgroundImage: 'url(https://i.ibb.co/DMKxLWq/christopher-gower-a-Xa21cf7r-Y-unsplash.jpg)'}}>
             <div className="hero-overlay bg-opacity-20"></div>
-            <div className="hero-content flex-col ">
-                <div className="">
+            <div className="hero-content flex-col my-10">
+                <div className="my-10">
                     <h1 className="text-5xl font-bold text-center">Add New Product now!</h1>
                     {/* <img className="lg:w-[500px]" src="https://i.ibb.co/DMKxLWq/christopher-gower-a-Xa21cf7r-Y-unsplash.jpg" alt="" /> */}
                 </div>

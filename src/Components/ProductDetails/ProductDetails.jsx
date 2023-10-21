@@ -2,9 +2,6 @@
 import {  useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
-import { saveProduct } from "../Utility/localStorage";
-
-
 
 const ProductDetails = () => {
     const { id}  = useParams()
@@ -32,7 +29,7 @@ const ProductDetails = () => {
     return (
         <div className="lg:w-[1280px] mx-auto my-20 p-6">
             <div className="card w-full bg-base-300 shadow-xl">
-                <figure><img src={photo} /></figure>
+                <figure><img className="my-10" src={photo} /></figure>
                 <div className="card-body">
                     <h2 className="card-title ">Brand Name: {brand} </h2>
                     <h2> <b>Product Name:</b> <span className="text-blue-600 font-bold">{name}</span></h2>
@@ -40,7 +37,7 @@ const ProductDetails = () => {
                     <p><b>Device :</b>{type}</p>
                     <p><b>Details:</b> {details}</p>
                     <p><b>Price :</b>{price}$</p>
-                    <p><b>Rating Star:</b> {ratings}</p>
+                    <p><b>Rating Star:</b> {ratings}/5</p>
                     <div className="card-actions ">
                         <button onClick={()=>handleAddToCart(loadedProduct)} className="btn bg-blue-600 text-white">Add to Cart</button>
                         

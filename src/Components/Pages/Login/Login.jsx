@@ -38,6 +38,7 @@ const Login = () => {
         GoogleSignIn()
             .then(result => {
                 console.log(result.user)
+                setSuccessMessage('User Logged In Successfully!!!!')
             })
             .catch(error => {
                 console.error(error)
