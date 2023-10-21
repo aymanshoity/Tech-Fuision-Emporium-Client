@@ -1,6 +1,6 @@
 # Tech Fusion Emporium
 
-Live Link: https://tech-fusion-emporium.netlify.app/
+Live Link: https://6533b63357ebb9164c9f6f93--tech-fusion-emporium.netlify.app/
 
 Welcome to our website !!
 
