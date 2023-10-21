@@ -19,7 +19,7 @@ const CartItems = ({ item, product, setProduct }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/storedProducts/${_id}`, {
+                fetch(`https://brand-shop-server-ilw4bcctf-shoity.vercel.app/storedProducts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

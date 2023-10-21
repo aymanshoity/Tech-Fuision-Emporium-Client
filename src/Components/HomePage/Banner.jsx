@@ -28,7 +28,7 @@ const Banner = () => {
                             <button className="btn bg-blue-600 text-white">Shop Now</button>
                         </div>
                         <div className=" flex-1">
-                            <img src="https://i.ibb.co/y47D2y4/daniel-korpai-hb-TKIbu-Mm-BI-unsplash.jpg" className="w-full bg-white" />
+                            <img src="https://i.ibb.co/k0rrt5J/pixel-bee-u8is-JQ6-Qj-F4-unsplash.jpg" className="w-full bg-white" />
                         </div>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
