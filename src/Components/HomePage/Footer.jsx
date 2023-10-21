@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-base-300  text-black mt-20">
             <aside>
-                <img src="/public/logo.png" className="w-[50px] h-[50px]" />
+                <img src="./logo.png" className="w-[50px] h-[50px]" />
                 <p className="font-bold">
                     Tech Fusion Emporium<br />Providing reliable tech since 1992
                 </p>
