@@ -32,7 +32,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center ">
                     <GrTechnology className="bg-white text-3xl mr-2 "></GrTechnology>
-                    <h2 className="text-white normal-case lg:text-3xl text-xl ">  Tech Fuision Emporium</h2>
+                    <h2 className="text-white normal-case lg:text-3xl text-xl ">  Tech Fusion Emporium</h2>
                 </div>
 
             </div>
