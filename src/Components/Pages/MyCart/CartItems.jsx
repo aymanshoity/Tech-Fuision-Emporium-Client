@@ -1,8 +1,44 @@
-import { Link } from "react-router-dom";
+
+import Swal from "sweetalert2";
 
 
-const CartItems = ({ item }) => {
-    const { photo, name, brand, type, price, ratings, _id} = item
+const CartItems = ({ item, product, setProduct }) => {
+
+    console.log(product, setProduct)
+    const { photo, name, brand, type, price, ratings, _id } = item
+    const handleDelete = _id => {
+        console.log(_id)
+
+        Swal.fire({
+            title: `Are you sure that you want to delete ${name} from your cart?`,
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2563eb',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/storedProducts/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data =>{ console.log(data)
+                        if (data.deletedCount > 0)
+                        Swal.fire(
+                            'Deleted!',
+                            'Your Chosen Product has been deleted.',
+                            'success'
+                        )})
+                        
+                        const remaining = product.filter(item => item._id !== _id)
+                        setProduct(remaining)
+
+            }
+        })
+    }
+
+
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl my-10 flex flex-col lg:flex-row">
@@ -22,7 +58,7 @@ const CartItems = ({ item }) => {
                         <input type="radio" name="rating-1" className="mask mask-star" />
                     </div>
                     <div className="card-actions ">
-                        <Link className="btn bg-blue-600 text-white">delete</Link>
+                        <button onClick={() => handleDelete(_id)} className="btn bg-blue-600 text-white">delete</button>
                     </div>
                 </div>
             </div>

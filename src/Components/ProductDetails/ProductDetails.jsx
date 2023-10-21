@@ -13,10 +13,19 @@ const ProductDetails = () => {
     const {photo, name, brand, type, price, ratings,details} = loadedProduct
     console.log(id,loadedProduct)
 
-    const handleAddToCart=(id)=>{
-         console.log(id)
-         saveProduct(id)
+    const handleAddToCart=(loadedProduct)=>{
+         console.log(loadedProduct)
+        //  saveProduct(id)
          Swal.fire('Product Added Successfully!')
+         fetch('http://localhost:5000/storedProducts',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(loadedProduct)
+         })
+         .then(res=>res.json())
+         .then(data=>console.log(data))
          
          
     }
@@ -33,7 +42,7 @@ const ProductDetails = () => {
                     <p><b>Price :</b>{price}$</p>
                     <p><b>Rating Star:</b> {ratings}</p>
                     <div className="card-actions ">
-                        <button onClick={()=>handleAddToCart(id)} className="btn bg-blue-600 text-white">Add to Cart</button>
+                        <button onClick={()=>handleAddToCart(loadedProduct)} className="btn bg-blue-600 text-white">Add to Cart</button>
                         
                     </div>
                 </div>

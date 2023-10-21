@@ -21,7 +21,7 @@ const Routes = createBrowserRouter([
         {path:'/:brand',element:<SingleBrand></SingleBrand>,loader:({params})=>fetch(`http://localhost:5000/products/${params.brand}`)},
         {path:'/addProduct',element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>},
         {path:'/:brand/:id',element:<PrivateRoute><ProductDetails></ProductDetails> </PrivateRoute>,loader:({params})=>fetch(`http://localhost:5000/products/${params.brand}/${params.id}`)},
-        {path:'/myCart',element:<PrivateRoute><MyCart></MyCart> </PrivateRoute>,loader:()=>fetch('http://localhost:5000/products')},
+        {path:'/myCart',element:<PrivateRoute><MyCart></MyCart> </PrivateRoute>,loader:()=>fetch('http://localhost:5000/storedProducts')},
         {path:'/login',element: <Login></Login> },
         {path:'/register',element:<Register></Register> }
 
