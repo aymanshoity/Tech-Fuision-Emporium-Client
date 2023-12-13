@@ -14,7 +14,7 @@ const ProductDetails = () => {
          console.log(loadedProduct)
         //  saveProduct(id)
          Swal.fire('Product Added Successfully!')
-         fetch('https://brand-shop-server-ilw4bcctf-shoity.vercel.app/storedProducts',{
+         fetch('https://brand-shop-server-rho-lake.vercel.app/storedProducts',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

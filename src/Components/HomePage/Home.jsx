@@ -1,5 +1,6 @@
 
 
+import About from "./About";
 import AllBrands from "./AllBrands";
 import Banner from "./Banner";
 import ChooseUs from "./ChooseUs";
@@ -13,6 +14,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <About></About>
             <AllBrands></AllBrands>
             <ChooseUs></ChooseUs>
             <Connection></Connection>
